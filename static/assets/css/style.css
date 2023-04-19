@@ -918,51 +918,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all ease-in-out 0.4s;
-  background: #fff;
-}
-
-.services .icon-box .icon {
-  margin-bottom: 10px;
-}
-
-.services .icon-box .icon i {
-  color: #47b2e4;
-  font-size: 36px;
-  transition: 0.3s;
-}
-
-.services .icon-box h4 {
-  font-weight: 500;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-
-.services .icon-box h4 a {
-  color: #37517e;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  transform: translateY(-10px);
-}
-
-.services .icon-box:hover h4 a {
-  color: #47b2e4;
-}
-
-/*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
 .cta {
@@ -1120,7 +1075,7 @@ section {
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
-  position: relative;
+  : relative;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
@@ -1554,7 +1509,7 @@ section {
   color: #fff;
 }
 
-.contact .php-email-form {
+.contact .contact-form {
   width: 100%;
   border-top: 3px solid #47b2e4;
   border-bottom: 3px solid #47b2e4;
@@ -1563,20 +1518,12 @@ section {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.contact .php-email-form .form-group {
+.contact .contact-form .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
 
-.contact .php-email-form .error-message {
-  display: none;
+.contact .contact-form .error-message {
   color: #fff;
   background: #ed3c0d;
   text-align: left;
@@ -1584,12 +1531,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .contact-form .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
-  display: none;
+.contact .contact-form .sent-message {
   color: #fff;
   background: #18d26e;
   text-align: center;
@@ -1597,14 +1543,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .contact-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .contact-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1617,45 +1563,44 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form .form-group {
+.contact .contact-form .form-group {
   margin-bottom: 20px;
 }
 
-.contact .php-email-form label {
+.contact .contact-form label {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .contact-form input,
+.contact .contact-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
   border-color: #47b2e4;
 }
 
-.contact .php-email-form input {
+.contact .contact-form input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact .contact-form textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .contact-form button {
   background: #47b2e4;
   border: 0;
   padding: 12px 34px;
   color: #fff;
-  transition: 0.4s;
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .contact-form button:hover {
   background: #209dd8;
 }
 
@@ -1911,4 +1856,65 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# services Section
+--------------------------------------------------------------*/
+#services {
+  padding: 60px 0;
+}
+
+#services .service {
+  border: 1px solid #e0e5fa;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+#services .service:hover .service-img img {
+  transform: scale(1.1);
+}
+
+#services .service-img {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#services .service-img img {
+  transition: 0.3s ease-in-out;
+}
+
+#services h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 0 20px;
+}
+
+#services a {
+  color: #152b79;
+}
+
+#services a:hover {
+  color: #f82249;
+}
+
+#services .stars {
+  padding: 0 20px;
+  margin-bottom: 5px;
+}
+
+#services .stars i {
+  color: rgb(255, 195, 29);
+}
+
+#services p {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  color: #060c22;
+  font-style: italic;
+  font-size: 15px;
 }

@@ -1,17 +1,16 @@
 {% load static %}
 {% block slider %}
-<div class="slides-1 swiper" id="swiper" >
+<div class="portfolio-details-slider swiper" id="swiper" >
     <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        {% for service in services %}
+            <div class="swiper-slide p-2">
             <div class="item">
-                <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+                {% if service.adImage %}
+                <img src="{{service.adImage.url}}" class="img-fluid animated" alt="">
+                {% endif %}
             </div>
         </div>
-        <div class="swiper-slide">
-            <div class="item" >
-                <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

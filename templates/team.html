@@ -6,45 +6,31 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Meet Our industry tested team</p>
+          <p>Meet Our Industry Tested Team Which Gives It's Best To Meet Our Client's Expectations</p>
         </div>
 
         <div class="row">
 
-          <div class="col-lg-6">
+          {% for t in members %}
+          <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{t.image.url}}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Kigozi Joseph</h4>
-                <span>Software Engineer</span>
-                <p>We 're tested not to show our weaknesses but to discover our strength</p>
+                <h4>{{t.name}}</h4>
+                <span>{{t.title}}</span>
+<!--                We 're tested not to show our weaknesses but to discover our strength-->
+                <p>{{t.phrase}}</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="{{t.twitter_handle}}"><i class="ri-twitter-fill"></i></a>
+                  <a href="{{t.fb}}"><i class="ri-facebook-fill"></i></a>
+                  <a href="{{t.instangram}}"><i class="ri-instagram-fill"></i></a>
+                  <a href="{{t.linkedIn}}"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Wavamukozzi Ezekiel</h4>
-                <span>Software Engineer</span>
-                <p>Don't wait for an opportunity, create it</p><br>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-{% comment %}
+          {% endfor %}
+          {% comment %}
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
               <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>

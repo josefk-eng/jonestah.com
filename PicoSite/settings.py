@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4^r(lzw^ocggq58+3^*x0&%ekk-fzf9h*yrw943)tzwr%2yw^+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.132.61.137', 'jonestah.com']
+ALLOWED_HOSTS = ['18.132.61.137', 'jonestah.com','127.0.0.1']
 
 
 # Application definition
@@ -34,11 +34,17 @@ ALLOWED_HOSTS = ['18.132.61.137', 'jonestah.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'bootstrap4',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Pages',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,3 +129,10 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Base url to serve media files
+MEDIA_URL = '/media/'
+
+# Path where media is stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
