@@ -488,8 +488,9 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #c3883d;
-  color:#fff
+  background: #37517e;
+  color:#fff;
+  border: 1px solid #fff;
 }
 
 #hero .btn-watch-video {
